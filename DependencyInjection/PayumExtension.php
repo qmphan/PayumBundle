@@ -194,7 +194,7 @@ class PayumExtension extends Extension implements PrependExtensionInterface
         $container->setDefinition('payum.dynamic_registry', $registry);
 
         if ($dynamicGatewaysConfig['sonata_admin']) {
-            if (false == class_exists(Admin::class)) {
+            if (false == class_exists('Admin::class')) {
                 throw new LogicException('Admin class does not exists. Did you install SonataAdmin bundle?');
             }
 
